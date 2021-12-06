@@ -1,0 +1,31 @@
+#!/bin/bash
+
+function LiquidUI() {
+
+ADVSEL=$(whiptail --title "LiquidUI (lui)" --fb --menu "Version 1.0" 15 60 4 \
+"1" "Nano (Yazı Düzenleyici)" \
+"2" "LUI Güncelle" \
+"3" "Hakkında" 3>&1 1>&2 2>&3)
+
+case $ADVSEL in
+
+1)
+clear
+nano
+;;
+
+2)
+clear
+echo "[!] Liquid Otomatik Güncellemeyi Henüz Desteklemiyor!"
+;;
+
+3)
+clear
+echo "[!] LiquidUI Version 1.0 Alpha"
+
+;;
+
+esac
+
+}
+LiquidUI
